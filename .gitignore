@@ -1,0 +1,10 @@
+.DS_Store
+/jspm_packages/
+/node_modules/
+/.idea/
+/npm-debug.log
+/esdoc/
+/config.js
+/.yarnclean
+/yarn.lock
+/package-lock.json
