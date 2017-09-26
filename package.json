@@ -25,6 +25,7 @@
     "dependencies": {
       "angular-core": "milenstanev/mstanev.angular.1.x.x.core@^0.0.3",
       "christopherthielen/ui-router-extras": "^0.1.3",
+      "milenstanev/mstanev.angular.1.x.x.core": "^0.0.5",
       "ocombe/ocLazyLoad": "^1.1.0"
     },
     "devDependencies": {
