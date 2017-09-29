@@ -3,17 +3,7 @@ const fs = require('fs');
 const Builder = require('systemjs-builder');
 const pjson = require('../package.json');
 
-let builderConfigMeta = {
-  'angular-core': {
-    build: false
-  },
-  'christopherthielen/ui-router-extras': {
-    build: true
-  },
-  'ocombe/ocLazyLoad': {
-    build: true
-  }
-};
+let builderConfigMeta = {};
 
 for(let key in pjson.jspm.dependencies) {
   if(!builderConfigMeta.hasOwnProperty(key)) {
@@ -50,7 +40,7 @@ builder.config({
 
 builder
   .buildStatic(
-    `${baseUrl}/src/index.js`,
+    `${baseUrl}/src/${pjson.main}.js`,
     `${baseUrl}/${pjson.main}.js`,
     {
       inject: true,
