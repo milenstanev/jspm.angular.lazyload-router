@@ -1,6 +1,6 @@
 import {
   angular, CoreModule
-} from 'angular-core';
+} from 'milenstanev/mstanev.angular.1.x.x.core';
 
 export const featureModule = angular.module(
     'testModule', [CoreModule]

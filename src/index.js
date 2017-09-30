@@ -1,6 +1,6 @@
 import {
   angular, CoreModule
-} from 'angular-core';
+} from 'milenstanev/mstanev.angular.1.x.x.core';
 
 import router from './router';
 

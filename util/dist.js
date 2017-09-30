@@ -33,7 +33,7 @@ const baseUrl = '.';
 /**
  * Configure builder paths
  */
-const builder = new Builder(`${baseUrl}/`, `${baseUrl}/config.js`);
+const builder = new Builder(`${baseUrl}/`, `${baseUrl}/${pjson.jspm.configFile}`);
 
 builder.config({
   meta: builderConfigMeta,
@@ -64,5 +64,24 @@ builder
 })
   .catch(function(err) {
     console.log('Build error\n');
+    console.log(err);
+  });
+
+builder
+  .buildStatic(
+    `${baseUrl}/src/test-module.js`,
+    `${baseUrl}/src/test-module.bundle.js`,
+    {
+      inject: true,
+      minify: true,
+      mangle: false,
+      sourceMaps: true,
+      format: 'umd'
+    }
+  ).then(function() {
+    console.log('Build test component complete\n');
+  })
+  .catch(function(err) {
+    console.log('Build test component error\n');
     console.log(err);
   });

@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <script src="jspm_packages/system.js"></script>
-  <script src="config.js"></script>
+  <script src="system-config.js"></script>
   <script>
     function bootstrap({ appLazyLoadRouterModule, futureRoutesCollection }) {
       futureRoutesCollection.push({
           'stateName': 'test',
           'urlPrefix': '/test',
           'type': 'load',
-          'src': 'src/test-module.js',
+          'src': 'src/test-module.bundle.js',
           'moduleExport': 'module:name:constant',
           'moduleExportName': 'testModule'
         });
@@ -29,22 +29,15 @@
     }
 
     <!--region dev-->
-    /*SystemJS.config({
-      defaultJSExtensions: true,
-      transpiler: "plugin-babel",
-      babelOptions: {
-        presets: ['babel-preset-es2017'],
-        plugins: ['babel-plugin-transform-decorators-legacy']
-      },
-      map: {
-        "systemjs-babel-build": "npm:systemjs-plugin-babel@0.0.25/systemjs-babel-browser.js"
-      }
-    });
-    SystemJS.import('./src/index').then(bootstrap);*/
+   /* SystemJS.import('milenstanev/mstanev.angular.1.x.x.core').then(() => {
+      SystemJS.import('./src/index').then(bootstrap);
+    })*/
     <!--endregion-->
 
     <!--region Prod-->
-    SystemJS.import('./angular.lazyload-router').then(bootstrap);
+    SystemJS.import('milenstanev/mstanev.angular.1.x.x.core').then(() => {
+      SystemJS.import('jspm.angular.lazyload-router').then(bootstrap);
+    })
     <!--endregion-->
   </script>
 </head>

@@ -1,0 +1,1 @@
+{"version":3,"sources":["test-module.js"],"names":["angular","_","CoreModule","featureModule","module","config","$stateProvider","$urlRouterProvider","state","component","name"],"mappings":"2tFAAAA,QAAAC,EAAAD,QAAAE,WAAAD,EAAAC,wDAIaC,cAAAH,QAAgBI,OAAA,cAAAF,aAAAG,QAGnB,iBAAA,qBAEN,SAAAC,eAAAC,mCACEC,MAAA,YACiB,kBADjB,qBANuBC,UAAA,0BAAA,yBAAtBC","file":"test-module.bundle.js"}
