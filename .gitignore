@@ -8,3 +8,4 @@
 /.yarnclean
 /yarn.lock
 /package-lock.json
+/system-config.js

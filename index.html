@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <script src="jspm_packages/system.js"></script>
+  <!--<script src="jspm_packages/system.js"></script>-->
+  <script src="jspm_packages/system-csp-production.js"></script>
   <script src="system-config.js"></script>
   <script>
     function bootstrap({ appLazyLoadRouterModule, futureRoutesCollection }) {
@@ -29,13 +30,13 @@
     }
 
     <!--region dev-->
-   /* SystemJS.import('milenstanev/mstanev.angular.1.x.x.core').then(() => {
+    /*SystemJS.import('angular-core').then(() => {
       SystemJS.import('./src/index').then(bootstrap);
     })*/
     <!--endregion-->
 
     <!--region Prod-->
-    SystemJS.import('milenstanev/mstanev.angular.1.x.x.core').then(() => {
+    SystemJS.import('angular-core').then(() => {
       SystemJS.import('jspm.angular.lazyload-router').then(bootstrap);
     })
     <!--endregion-->
