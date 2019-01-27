@@ -54,7 +54,7 @@ builder
     `${baseUrl}/${pjson.main}.js`,
     {
       inject: true,
-      minify: false,
+      minify: true,
       mangle: false,
       sourceMaps: true,
       format: 'umd'
